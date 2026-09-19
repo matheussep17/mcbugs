@@ -24,6 +24,7 @@ export function QuantityControl({ quantity, onIncrease, onDecrease, size = 'md' 
         className={cn('rounded-full', sizeClasses[size].button)}
         onClick={onDecrease}
         disabled={quantity <= 1}
+        aria-label="Diminuir quantidade"
       >
         <Minus className="h-4 w-4" />
       </Button>
@@ -35,6 +36,7 @@ export function QuantityControl({ quantity, onIncrease, onDecrease, size = 'md' 
         size="icon"
         className={cn('rounded-full', sizeClasses[size].button)}
         onClick={onIncrease}
+        aria-label="Aumentar quantidade"
       >
         <Plus className="h-4 w-4" />
       </Button>
