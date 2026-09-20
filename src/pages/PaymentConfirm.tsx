@@ -105,7 +105,7 @@ const PaymentConfirm = () => {
       </div>
 
       {/* Order Details */}
-      <div className="bg-card rounded-2xl p-6 shadow-soft mb-6">
+      <div role="group" aria-label="Detalhes do pagamento" className="bg-card rounded-2xl p-6 shadow-soft mb-6">
         <h3 className="font-display font-bold text-lg mb-4">Detalhes do pedido</h3>
         <div className="space-y-3 text-sm">
           <div className="flex justify-between">

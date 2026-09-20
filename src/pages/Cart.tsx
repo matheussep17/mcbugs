@@ -73,7 +73,7 @@ const Cart = () => {
           </h1>
         </div>
 
-        <div className="space-y-4">
+        <div role="list" aria-label="Itens do pedido" className="space-y-4">
           {items.map((item) => (
             <CartItemCard
               key={item.product.id}

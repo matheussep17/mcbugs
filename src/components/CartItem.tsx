@@ -12,7 +12,7 @@ interface CartItemProps {
 
 export function CartItemCard({ item, onUpdateQuantity, onRemove }: CartItemProps) {
   return (
-    <div className="flex gap-4 p-4 bg-card rounded-2xl shadow-soft">
+    <div role="listitem" aria-label={item.product.name} className="flex gap-4 p-4 bg-card rounded-2xl shadow-soft">
       <div className="w-24 h-24 rounded-xl overflow-hidden bg-secondary flex-shrink-0">
         <img
           src={item.product.image}
@@ -32,6 +32,7 @@ export function CartItemCard({ item, onUpdateQuantity, onRemove }: CartItemProps
             variant="ghost"
             size="icon-sm"
             onClick={onRemove}
+            aria-label={`Remover ${item.product.name}`}
             className="text-muted-foreground hover:text-destructive flex-shrink-0"
           >
             <Trash2 className="h-4 w-4" />
